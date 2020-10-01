@@ -1,0 +1,27 @@
+@mixin mixAHoverEffect($backgroundColor: $varColor2, $borderColor: $varColor2) {
+  background-color: $backgroundColor;
+  border-color: $borderColor;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+@mixin mixDisplayFlex(
+  $backgroundColor: red,
+  $flexDirection: row,
+  $flexWrap: nowrap,
+  $flexJustifyContent: center,
+  $flexAlignItems: center,
+  $flexAlignContent: center
+) {
+  display: flex;
+  background-color: $backgroundColor;
+  flex-direction: $flexDirection;
+  flex-wrap: $flexWrap;
+  justify-content: $flexJustifyContent;
+  align-items: $flexAlignItems;
+  align-content: $flexAlignContent;
+}
+
+@mixin mixinBackgroundImage($imageURL: $varImageUrl) {
+  background-image: $imageURL;
+}

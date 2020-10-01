@@ -1,0 +1,90 @@
+header {
+  @include mixDisplayFlex($varColor3, row, nowrap, center, center, center);
+
+  .man-container {
+    width: 100%;
+    padding: 0.25em 10.625em !important;
+  }
+
+  .man-navbar,
+  .navbar {
+    .navbar-toggler {
+      color: $varColor3;
+      border: 1px solid transparent;
+      &:hover {
+        color: $varColor1;
+      }
+      &:focus {
+        background-color: transparent;
+        border: 1px solid $varColor2 !important;
+        border-color: $varColor2 !important;
+        outline: $varColor1;
+      }
+    }
+  }
+
+  .man-selectLanguage {
+    button {
+      background-color: transparent;
+      border: transparent;
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+        border: transparent;
+        color: $varColor1;
+        box-shadow: none;
+      }
+    }
+  }
+}
+
+header.isLoggedIn {
+  margin-top: $varIsLoggedIn;
+}
+
+/*Large - extra large (nav only)*/
+@media (max-width: 1380px) {
+  header {
+    .man-container {
+      width: 100%;
+      padding: 0.25em 2.625em !important;
+    }
+  }
+}
+/*Large - extra large*/
+@media (max-width: 1199px) {
+  header {
+    .man-container {
+      width: 100%;
+      padding: 0.25em 2.625em !important;
+    }
+  }
+}
+/*Medium - Large*/
+@media (max-width: 991px) {
+  header {
+    .man-container {
+      width: 100%;
+      padding: 0.25em 2.625em !important;
+    }
+  }
+}
+/*Small - Medium*/
+@media (max-width: 767px) {
+  header {
+    .man-container {
+      width: 100%;
+      padding: 0.25em 2.625em !important;
+    }
+  }
+}
+/*Extra Small*/
+@media (max-width: 575px) {
+  header {
+    .man-container {
+      width: 100%;
+      padding: 0.25em 0em !important;
+    }
+  }
+}

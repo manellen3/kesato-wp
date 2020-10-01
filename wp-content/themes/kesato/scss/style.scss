@@ -1,0 +1,291 @@
+/*
+Theme Name: Kesato
+Theme URI: https://manellen.com
+Author: Manellen
+Author URI: https://manellen.com
+Description: This theme exclusively developed for Kesato Brain Box.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: Kesato
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "variables";
+@import "mixins";
+@import "header";
+@import "footer";
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: $varColor1;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  color: $varColor1;
+  &::placeholder {
+    font-family: $varFontFamily2;
+    font-style: italic;
+    font-size: $varFontSize7;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  a,
+  ul,
+  li,
+  dt,
+  dd,
+  dl,
+  form,
+  input,
+  select,
+  textarea,
+  button,
+  span,
+  label {
+    font-family: $varFontFamily2;
+  }
+  h1 {
+    font-size: $varFontSize1;
+    font-family: $varFontFamily1;
+    margin-bottom: $varFontSize7;
+  }
+  h2 {
+    font-size: $varFontSize2;
+    font-family: $varFontFamily1;
+    margin-bottom: $varFontSize7;
+  }
+  h3 {
+    font-size: $varFontSize3;
+  }
+  h4 {
+    font-size: $varFontSize4;
+  }
+  h5 {
+    font-size: $varFontSize5;
+  }
+  h6 {
+    font-size: $varFontSize6;
+  }
+  p {
+    font-size: $varFontSize7;
+    margin-bottom: $varFontSize3;
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+  }
+  a {
+    font-size: $varFontSize7;
+    color: $varColor1;
+    text-decoration: underline;
+    &:hover {
+      color: $varColor2;
+      text-decoration: none;
+    }
+  }
+  a.btn,
+  a.btn.btn-primary {
+    @include mixAHoverEffect($varColor1, $varColor1);
+    &:hover,
+    &:active,
+    &:focus {
+      @include mixAHoverEffect();
+    }
+  }
+  .btn-primary:not(:disabled):not(.disabled).active,
+  .btn-primary:not(:disabled):not(.disabled):active,
+  .show > .btn-primary.dropdown-toggle {
+    @include mixAHoverEffect();
+  }
+  .font-size-1 {
+    font-size: $varFontSize1;
+  }
+  .font-size-2 {
+    font-size: $varFontSize2;
+  }
+  .font-size-3 {
+    font-size: $varFontSize3;
+  }
+  .font-size-4 {
+    font-size: $varFontSize4;
+  }
+  .font-size-5 {
+    font-size: $varFontSize5;
+  }
+  .font-size-6 {
+    font-size: $varFontSize6;
+  }
+  .font-size-7 {
+    font-size: $varFontSize7;
+  }
+  .font-color-1 {
+    color: $varColor1;
+  }
+  .font-color-2 {
+    color: $varColor2;
+  }
+  .font-color-3 {
+    color: $varColor3;
+  }
+  .bg-color-1 {
+    background-color: $varColor1;
+    transition: 1s;
+  }
+  .bg-color-2 {
+    background-color: $varColor2;
+    transition: 1s;
+  }
+  .bg-color-3 {
+    background-color: $varColor3;
+    transition: 1s;
+  }
+  .man-bg-parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .man-bg-generic {
+    background-attachment: scroll;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .man-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .man-content-padding {
+    padding: 6.25em 10.625em;
+  }
+  .man-background-img-1 {
+    @include mixinBackgroundImage(
+      url("../kesato/images/Web-Banner-Slideshow-3.jpg")
+    );
+  }
+  #map {
+    width: 80%;
+    height: 450px;
+    margin-top: -250px;
+  }
+  .mb-custom-map {
+    margin-bottom: 250px;
+  }
+  #navMenu {
+    margin-top: -33.75em;
+    position: fixed;
+    z-index: 99999;
+    width: 100%;
+    background: $varColor4;
+    transition: 1s;
+    button {
+      color: $varColor3;
+      &:hover {
+        color: $varColor2;
+      }
+    }
+    .man-container {
+      width: 100%;
+      padding: 0.25em 10.625em !important;
+    }
+    #navbarSupportedContent {
+      display: flex;
+      align-content: stretch;
+      justify-content: center;
+      align-items: center;
+      ul {
+        padding: 3%;
+        width: 100%;
+      }
+      li {
+        margin: 0% 0%;
+        padding: 1% 0%;
+        border-bottom: 1px solid $varColor5;
+      }
+      a {
+        text-decoration: none;
+        color: $varColor3;
+        &:hover {
+          color: $varColor2;
+        }
+      }
+    }
+  }
+  #navMenu.active {
+    @extend #navMenu;
+    margin-top: 0px;
+  }
+}
+
+body.isLoggedIn {
+  margin-top: $varIsLoggedIn;
+}
+
+main {
+  background-color: $varColor3;
+  .blog-post article:hover img {
+    transition-duration: 0.7s;
+    transform: scale(1.05) translateZ(0);
+  }
+  .blog-post article img {
+    transition: transform 1.5s cubic-bezier(0.16, 1.08, 0.38, 0.98);
+  }
+}
+
+/*Large - extra large (nav only)*/
+@media (max-width: 1380px) {
+  body {
+    .man-content-padding {
+      padding: 6.25em 2.625em;
+    }
+  }
+}
+/*Large - extra large*/
+@media (max-width: 1199px) {
+  body {
+    .man-content-padding {
+      padding: 6.25em 2.625em;
+    }
+  }
+}
+/*Medium - Large*/
+@media (max-width: 991px) {
+  body {
+    .man-content-padding {
+      padding: 6.25em 2.625em;
+    }
+  }
+}
+/*Small - Medium*/
+@media (max-width: 767px) {
+  body {
+    .man-content-padding {
+      padding: 6.25em 2.625em;
+    }
+  }
+}
+/*Extra Small*/
+@media (max-width: 575px) {
+  body {
+    #navMenu {
+      .man-container {
+        width: 100%;
+        padding: 0.25em 0em !important;
+      }
+    }
+    .man-content-padding {
+      padding: 6.25em 1em;
+    }
+  }
+}
